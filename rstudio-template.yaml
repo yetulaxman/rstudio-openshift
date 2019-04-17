@@ -8,9 +8,9 @@ message: |-
 metadata:
   annotations:
     description: 
-    iconClass: icon-other-unknown
+    iconClass: fa fa-bar-chart
     openshift.io/display-name: RStudio
-    openshift.io/documentation-url: https://github.com/CSCfi/rstudio-openshift
+    openshift.io/documentation-url: https://github.com/yetulax/rstudio-openshift
     openshift.io/support-url: https://www.csc.fi/contact-info
     openshift.io/long-description: 
     openshift.io/provider-display-name: CSC
@@ -75,6 +75,9 @@ objects:
     to:
       kind: Service
       name: ${NAME}
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
 
 - apiVersion: v1
   kind: Route
@@ -88,6 +91,9 @@ objects:
     to:
       kind: Service
       name: ${NAME}-shiny
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
 
 - apiVersion: v1
   kind: ImageStream
@@ -115,10 +121,7 @@ objects:
     source:
       dockerfile: "FROM alpine:latest \n RUN apk --no-cache add python3"
     strategy:
-      dockerStrategy:
-        buildArgs:
-          - name: tag
-            value: alpine-python3
+      type: Docker
     output:
       to:
         kind: ImageStreamTag
@@ -138,8 +141,8 @@ objects:
     source:
       type: Git
       git:
-        uri: https://github.com/CSCfi/rstudio-openshift.git
-        ref: dev
+        uri: https://github.com/yetulax/rstudio-openshift.git
+        ref: master
       contextDir: server
     strategy:
       dockerStrategy:
@@ -148,9 +151,8 @@ objects:
             value: ${USERNAME}
           - name: "PASSWORD"
             value: ${PASSWORD}
-        buildArgs:
-          - name: tag
-            value: rstudio
+          - name: "NAME"
+            value: ${NAME}
 
     output:
       to:
@@ -281,4 +283,5 @@ parameters:
 - description: The exposed hostname suffix that will be used to create routes for app
   displayName: Application Hostname Suffix
   name: APPLICATION_DOMAIN_SUFFIX
-  value: rahti-int-app.csc.fi
+  required: true
+  value: rahtiapp.fi
