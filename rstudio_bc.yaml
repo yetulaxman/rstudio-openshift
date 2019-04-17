@@ -9,8 +9,8 @@ spec:
   source:
     type: Git
     git:
-      uri: https://github.com/CSCfi/rstudio-openshift.git
-      ref: dev
+      uri: https://github.com/yetulax/rstudio-openshift.git
+      ref: master
     contextDir: server
   strategy:
     dockerStrategy:
@@ -19,6 +19,8 @@ spec:
           value: ${USERNAME}
         - name: "PASSWORD"
           value: ${PASSWORD}
+        - name: "NAME"
+          value: ${NAME}
       buildArgs:
         - name: tag
           value: rstudio
