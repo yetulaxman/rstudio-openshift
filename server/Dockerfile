@@ -1,5 +1,8 @@
 # Upstream Dockerfile https://github.com/rocker-org/rocker-versioned/blob/master/tidyverse/3.4.4/Dockerfile
-FROM rocker/tidyverse:3.4.4
+#FROM rocker/tidyverse:3.4.4
+FROM bioconductor/release_protmetcore2:latest
+ADD Install.R /tmp/
+RUN R -f /tmp/Install.R
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     nano=2.7.4-1 \
