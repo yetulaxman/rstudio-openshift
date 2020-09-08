@@ -11,6 +11,6 @@ if (!all(ok))
          paste(pkgs_to_install[!ok], collapse="  \n  "))
 
 BiocManager::install("DEP")
-#library(devtools)
-#install_github("bartongroup/Proteus")
+library(devtools)
+install_github("bartongroup/Proteus")
 #suppressWarnings(BiocManager::install(update=TRUE, ask=FALSE))
