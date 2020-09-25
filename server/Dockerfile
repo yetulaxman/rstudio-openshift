@@ -74,6 +74,7 @@ RUN chmod go+w -R $HOME && \
     groupmod -g 988 rstudio-server && \
     usermod -u "$APP_UID" "$USERNAME" && \
     groupmod -g "$APP_GID" "$USERNAME" && \
+    mkdir -p /var/run/s6 && \
     chmod -R go+w  /var/run/s6  /etc/rstudio/rsession.conf
 
 RUN chgrp root -R /usr/local/lib/R/site-library
