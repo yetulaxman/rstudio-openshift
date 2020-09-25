@@ -1,8 +1,23 @@
 # Upstream Dockerfile https://github.com/rocker-org/rocker-versioned/blob/master/tidyverse/3.4.4/Dockerfile
 #FROM rocker/tidyverse:3.4.4
-FROM bioconductor/release_protmetcore2:latest
-ADD Install.R /tmp/
-RUN R -f /tmp/Install.R
+#FROM bioconductor/release_protmetcore2:latest
+#ADD Install.R /tmp/
+#RUN R -f /tmp/Install.R
+
+FROM rocker/r-ver:4.0.0
+
+ENV S6_VERSION=v1.21.7.0
+ENV RSTUDIO_VERSION=latest
+ENV PATH=/usr/lib/rstudio-server/bin:$PATH
+
+# add this for working with notebooks
+COPY userconf.sh /rocker_scripts/
+COPY install_daki.sh /rocker_scripts/
+COPY autodownload_and_configure.sh /etc/cont-init.d/zzz-autodownload-and-configure.sh
+
+RUN /rocker_scripts/install_daki.sh
+RUN /rocker_scripts/install_rstudio.sh
+RUN /rocker_scripts/install_pandoc.sh
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     nano=2.7.4-1 \
