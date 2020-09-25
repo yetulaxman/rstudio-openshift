@@ -49,14 +49,14 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /sbin
 RUN chmod +x /sbin/tini
 
 # Setup Shiny
-ADD https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-${PKG_SHINY_VERSION}-amd64.deb /tmp/shiny.deb
-RUN gdebi -n /tmp/shiny.deb && \
-    rm /tmp/shiny.deb && \
-    install2.r -e shiny rmarkdown shinythemes shinydashboard && \
-    cp -R /usr/local/lib/R/site-library/shiny/examples/* /srv/shiny-server/ && \
-    mkdir -p /var/log/shiny-server && \
-    chown rstudio.rstudio /var/log/shiny-server && \
-    chmod go+w -R /var/log/shiny-server /usr/local/lib/R /srv /var/lib/shiny-server
+#ADD https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-${PKG_SHINY_VERSION}-amd64.deb /tmp/shiny.deb
+#RUN gdebi -n /tmp/shiny.deb && \
+ #   rm /tmp/shiny.deb && \
+  #  install2.r -e shiny rmarkdown shinythemes shinydashboard && \
+   # cp -R /usr/local/lib/R/site-library/shiny/examples/* /srv/shiny-server/ && \
+   # mkdir -p /var/log/shiny-server && \
+   # chown rstudio.rstudio /var/log/shiny-server && \
+   # chmod go+w -R /var/log/shiny-server /usr/local/lib/R /srv /var/lib/shiny-server
 
 
 COPY rserver.conf rsession.conf /etc/rstudio/
