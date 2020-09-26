@@ -51,6 +51,7 @@ objects:
     selector:
       app: rstudio
 
+
 - apiVersion: v1
   kind: Route
   metadata:
@@ -67,6 +68,7 @@ objects:
       insecureEdgeTerminationPolicy: Redirect
       termination: edge
 
+
 - apiVersion: v1
   kind: ImageStream
   metadata:
@@ -74,7 +76,33 @@ objects:
       description: Keeps track of changes in the appliation image
     name: ${NAME}
 
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      description: Keeps track of changes in the appliation image
+    name: alpine-python3
+
 ####################
+- apiVersion: v1
+  kind: BuildConfig
+  metadata:
+    name: alpine-python3
+    annotations:
+      description: Defines how to build the application
+      template.alpha.openshift.io/wait-for-ready: "true"
+  spec:
+    source:
+      dockerfile: "FROM alpine:latest \n RUN apk --no-cache add python3"
+    strategy:
+      type: Docker
+    output:
+      to:
+        kind: ImageStreamTag
+        name: alpine-python3:latest
+    triggers:
+      - type: ImageChange
+      - type: ConfigChange
 
 - apiVersion: v1
   kind: BuildConfig
@@ -131,6 +159,14 @@ objects:
           from:
             kind: ImageStreamTag
             name: ${NAME}:latest
+      - type: ImageChange
+        imageChangeParams:
+          automatic: true
+          containerNames:
+            - shadowjob
+          from:
+            kind: ImageStreamTag
+            name: alpine-python3:latest
       - type: ConfigChange
     replicas: 1
     template:
@@ -147,6 +183,15 @@ objects:
           - name: ${NAME}-vol
             persistentVolumeClaim:
               claimName: ${NAME}-pvc
+        initContainers:
+        - image: alpine-python3:latest
+          command: ["/bin/sh","-c","source /tmp/secret-env/secret.env && python3 -c 'import crypt,os; print(crypt.crypt(os.environ[\"PASSWORD\"], crypt.mksalt(crypt.METHOD_SHA512)))' > /tmp/shadow/shadow.crypt"]
+          name: shadowjob
+          volumeMounts:
+            - name: r-secret-vol
+              mountPath: "/tmp/secret-env"
+            - name: r-shadow-vol
+              mountPath: "/tmp/shadow"
         containers:
           - name: ${NAME}
             image: ${NAME}:latest
@@ -168,6 +213,8 @@ objects:
                 cpu: 500m
                 memory: 1Gi
             env:
+            - name: SHINY_APPS_PATH
+              value: "/mnt/${NAME}-pvc/shiny-server/"
             - name: PVC_MOUNT_PATH
               value: "/mnt/${NAME}-pvc/"
             volumeMounts:
