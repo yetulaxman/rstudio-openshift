@@ -96,5 +96,5 @@ WORKDIR $HOME
 EXPOSE 8787 3838
 #MAINTAINER
 ENTRYPOINT ["/sbin/tini", "-g", "--"]
-#CMD ["/usr/local/bin/start.sh"]
-CMD ["/init"]
+CMD ["/usr/local/bin/start.sh"]
+#CMD ["/init"]
