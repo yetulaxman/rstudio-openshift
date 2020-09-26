@@ -60,7 +60,7 @@ RUN chmod +x /sbin/tini
 
 
 COPY rserver.conf rsession.conf /etc/rstudio/
-COPY start2.sh /usr/local/bin/start2.sh
+COPY start2.sh /usr/local/bin/start.sh
 COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY .Renviron $HOME/.Renviron
 
@@ -96,5 +96,5 @@ WORKDIR $HOME
 EXPOSE 8787 3838
 #MAINTAINER
 ENTRYPOINT ["/sbin/tini", "-g", "--"]
-CMD ["/usr/local/bin/start2.sh"]
+CMD ["/usr/local/bin/start.sh"]
 #CMD ["/init"]
