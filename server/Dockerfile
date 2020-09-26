@@ -60,7 +60,7 @@ RUN chmod +x /sbin/tini
 
 
 COPY rserver.conf rsession.conf /etc/rstudio/
-COPY start2.sh /usr/local/bin/start.sh
+COPY start.sh /usr/local/bin/start.sh
 COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY .Renviron $HOME/.Renviron
 
