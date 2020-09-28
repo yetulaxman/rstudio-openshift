@@ -10,7 +10,7 @@ Rstudio dockerfile for daki project (rstudio-daki) includes latest version of R 
 ## Deploying rstudio-daki on Rahti *via* Commandline
 Original openshift template (*rstudio-template.yaml*) was modified to include only rstudio, excluding shiny part for now and is renamed as *rstudio-daki-template.yaml*. Corresponding customised Dockerfile for openshift deployment is available in *daki* folder.
 
-The following command can be used to to deploy rstudio-daki on Rahti server:
+The following openshift command can be used to deploy rstudio-daki  server on Rahti:
 
 * *oc process -f rstudio-daki-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
