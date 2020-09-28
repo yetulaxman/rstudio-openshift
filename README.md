@@ -5,7 +5,7 @@ borrowed from other [CSC Github repository](https://github.com/CSCfi/rstudio-ope
 
 ## Customise rstudio with necessary packages for DAKI
 
-Rstudio dockerfile for daki project (rstudio-daki) includes latest version of R (v4.0.0) and rstudio along with basic necessary R-packages. Many more R-packages to be included later. Current state of Dockerfile (*rstudio-daki.Dockerfile*) is available in *daki* folder.
+Rstudio dockerfile for daki project (rstudio-daki) includes latest version of R (v4.0.0) and rstudio along with basic necessary R-packages. Many more R-packages to be included later as we go. Current state of Dockerfile (*rstudio-daki.Dockerfile*) is available in *daki* folder.
 
 ## Deploying rstudio-daki on Rahti *via* commandline
 Original openshift template (*rstudio-template.yaml*) was modified to include only rstudio, excluding shiny part for now and is renamed as *rstudio-daki-template.yaml*. Corresponding customised Dockerfile for openshift deployment (named as *Dockerfile*) is available in *daki* folder.
