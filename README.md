@@ -33,3 +33,8 @@ The following openshift command can be used to deploy rstudio-rda server on Raht
 ### Deployment of rstudio-rda on Notebooks
 ...
 
+
+
+## Funding:
+
+<img src="./EEU_ESR_FI_vertical_20mm_rgb.png" width="30%">
