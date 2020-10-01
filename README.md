@@ -37,10 +37,6 @@ The following openshift command can be used to deploy rstudio-rda server on Raht
 
 ## Funding:
 
-<img src="./EU_ESR_FI_vertical_20mm_rgb.png" width="30%">
-<img src="./Kainuun_liitton.png" width="30%">
-<img src="./VipuvoimaaEU_2014_2020_rgb.png" width="30%">
+<img src="./Logos.png" width="30%">
 
 
-
-|![](EU_ESR_FI_vertical_20mm_rgb.png){width="80%"}| <img src="./Kainuun_liitton.png" > | <img src="./VipuvoimaaEU_2014_2020_rgb.png">
