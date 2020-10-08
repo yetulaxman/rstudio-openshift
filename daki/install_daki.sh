@@ -83,6 +83,8 @@ install2.r --error --skipinstalled \
     PROJ \
     sotkanet \
     jsonlite \
-    pxweb
+    pxweb \
+    rjstat
+
 #R -e "BiocManager::install('GDAL')"
 rm -r /tmp/downloaded_packages
