@@ -198,13 +198,13 @@ parameters:
   displayName: Storage Size
   name: STORAGE_SIZE
   required: true
-  value: 1Gi
+  value: 4Gi
 
 - description: Docker Image for the RStudio
   displayName: Worker Image
   name: IMAGE
   required: true
-  value: docker-registry.rahti.csc.fi/rstudio-rda/rda:latest
+  value: docker-registry.rahti.csc.fi/rstudio-v4/rstudio-v4:latest
 
 - description: The exposed hostname suffix that will be used to create routes for app
   displayName: Application Hostname Suffix
