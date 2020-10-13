@@ -43,7 +43,6 @@ objects:
   stringData:
     secret.env: |-
       export PASSWORD=${PASSWORD}
-
 - apiVersion: v1
   kind: Service
   metadata:
@@ -198,7 +197,7 @@ parameters:
   displayName: Storage Size
   name: STORAGE_SIZE
   required: true
-  value: 5Gi
+  value: 1Gi
 
 - description: Docker Image for the RStudio
   displayName: Worker Image
