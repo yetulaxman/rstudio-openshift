@@ -115,7 +115,7 @@ objects:
     source:
       type: Git
       git:
-        uri: https://github.com/yetulax/rstudio-openshift.git
+        uri: https://github.com/yetulaxman/rstudio-openshift.git
         ref: master
       contextDir: rda
     strategy:
