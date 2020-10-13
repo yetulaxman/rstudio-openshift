@@ -204,7 +204,7 @@ parameters:
   displayName: Worker Image
   name: IMAGE
   required: true
-  value: docker-registry.rahti.csc.fi/rstudio-images/rstudio-os:latest
+  value: docker-registry.rahti.csc.fi/rstudio-v4/rstudio-v4:latest
 
 - description: The exposed hostname suffix that will be used to create routes for app
   displayName: Application Hostname Suffix
