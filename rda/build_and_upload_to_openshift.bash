@@ -13,9 +13,6 @@
 
 set -e
 
-export OSO_REGISTRY=docker-registry.rahti.csc.fi
-export OSO_PROJECT=rstuido-notebooks
-
 
 repository=${TAG_REPOSITORY:-'cscfi'}
 
