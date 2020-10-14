@@ -143,7 +143,7 @@ objects:
       git:
         uri: https://github.com/yetulaxman/rstudio-openshift.git
         ref: master
-      contextDir: rda-shiny
+      contextDir: rstudio-shiny
     strategy:
       dockerStrategy:
         env:
