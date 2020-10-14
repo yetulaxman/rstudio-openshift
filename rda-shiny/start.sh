@@ -7,7 +7,7 @@ echo "Done"
 set -e
 
 echo "Starting RSudio Server"
-echo "session-default-working-dir=/mnt/rstudiotest-pvc" >> /etc/rstudio/rsession.conf
+echo "session-default-working-dir=$HOME" >> /etc/rstudio/rsession.conf
 
 if [ ! -e "$HOME/.Renviron" ]; then
 	echo -e "HOME=/mnt/rstudiotest-pvc\nUSER=$USERNAME\nTZ=Europe/Helsinki" > "$HOME/.Renviron"
