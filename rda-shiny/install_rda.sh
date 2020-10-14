@@ -36,7 +36,8 @@ apt-get update -qq \
     vim \
     nano \
     gawk \
-    whois 
+    whois \
+    gdebi-core=0.9.5.7+nmu2
 
 echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh
 wget https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh  -O ~/anaconda.sh
