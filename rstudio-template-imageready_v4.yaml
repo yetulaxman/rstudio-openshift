@@ -130,7 +130,7 @@ objects:
             persistentVolumeClaim:
               claimName: ${NAME}-pvc
         initContainers:
-        - image: docker-registry.rahti.csc.fi/rstudio-v4/alpine-python3:latest
+        - image: docker-registry.rahti.csc.fi/rstudio-rda-shiny/alpine-python3:latest
           command: ["/bin/sh","-c","source /tmp/secret-env/secret.env && python3 -c 'import crypt,os; print(crypt.crypt(os.environ[\"PASSWORD\"], crypt.mksalt(crypt.METHOD_SHA512)))' > /tmp/shadow/shadow.crypt"]
           name: shadowjob
           volumeMounts:
@@ -204,7 +204,7 @@ parameters:
   displayName: Worker Image
   name: IMAGE
   required: true
-  value: docker-registry.rahti.csc.fi/rstudio-v4/rstudio-v4:latest
+  value: docker-registry.rahti.csc.fi/rstudio-rda-shiny/shiny-rda:latest
 
 - description: The exposed hostname suffix that will be used to create routes for app
   displayName: Application Hostname Suffix
