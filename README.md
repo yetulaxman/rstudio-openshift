@@ -40,7 +40,7 @@ In case you want to include shiny part as well, please use the following openshi
 
 # Deployment of rstudio images onto notebooks environment
 
-<img src="./Notebooks-deploy.png" width="50%">
+<img src="./Notebooks-deploy.png" width="80%">
 
 
 ## Funding
