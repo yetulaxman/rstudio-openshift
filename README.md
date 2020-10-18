@@ -1,6 +1,6 @@
 # rstudio-openshift applications (Work in progress)
 
-Rstudio-openshift applications is about building container-based data analytics tools by deploying mainly customised [RStudio](https://www.rstudio.com/) images in openshift and eventually make the applications available in notebooks environment at CSC. This repository contains openshift templates borrowed from other [CSC Github repository](https://github.com/CSCfi/rstudio-openshift).
+Rstudio-openshift applications tools are about building container-based data analytics tools by deploying mainly customised [RStudio](https://www.rstudio.com/) images in openshift and eventually make the applications available in notebooks environment at CSC. This repository contains openshift templates borrowed from other [CSC Github repository](https://github.com/CSCfi/rstudio-openshift).
 
 Currently these efforts include:
 - [rstudio for daki project](#rstudio-for-daki-project)
