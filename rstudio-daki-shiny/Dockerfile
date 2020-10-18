@@ -14,7 +14,7 @@ RUN /rocker_scripts/install_rstudio.sh
 RUN /rocker_scripts/install_pandoc.sh
 
 VOLUME /data
-COPY DataFiles /data/
+COPY open-data-examples /data/
 
 
 # Setup various variables
