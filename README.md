@@ -11,7 +11,7 @@ Rstudio applications currently include:
 Rstudio docker image for DAKI project (rstudio-daki) includes the latest version of R (v4.0.0), rstudio and required R-packages to help various data analysis activities in the broad scope of DAKI project. Current state of Dockerfile is available in *daki* folder. In addition ".dockerfile" is also included to generate a docker image that can be deployed on cPouta application where users usually have previlized access rights. The image thus generated however may not be compatible either openshift or notebooks enviroment.
 
 ### Deploying rstudio-daki on Rahti *via* commandline
-Original openshift template (*rstudio-template.yaml*) was modified to include only rstudio, excluding shiny part for now and is renamed as *rstudio-daki-template.yaml*. Corresponding customised Dockerfile for openshift deployment (named as *Dockerfile*) is available in *daki* folder.
+Original openshift template (i.e., *rstudio-template.yaml*) was modified to include only rstudio, excluding shiny part and is renamed as *rstudio-daki-template.yaml*. Corresponding customised Dockerfile for openshift deployment (named as *Dockerfile*) is available in *daki* folder.
 
 The following openshift command can be used to deploy rstudio-daki server on Rahti
 
