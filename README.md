@@ -17,7 +17,7 @@ The following openshift command can be used to deploy rstudio-daki server on Rah
 
 * *oc process -f rstudio-daki-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
-In case you wanto include shiny part as well, please use the following openshift command:
+In case you want to include shiny part as well, please use the following openshift command:
 
 * *oc process -f rstudio-daki-shiny-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
