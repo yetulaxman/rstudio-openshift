@@ -6,7 +6,7 @@ Rstudio applications currently include:
 - [rstudio for DAKI project](#rstudio-for-DAKI-project)
 - [rstudio for training environment](#rstudio-for-training-environment) 
 
-Once rstudio is image compatible for deploying in openshift environment, you can then deploy in Notebooks environment. Please follow the intrsuctions for [deploying rstudio images onto notebooks environment](deploying-rstudio-images-onto-notebooks-environment)
+Once rstudio image is compatible for deploying in openshift environment, you can then deploy in Notebooks environment. Please follow the intrsuctions for [deploying rstudio images onto notebooks environment](deploying-rstudio-images-onto-notebooks-environment)
 
 # rstudio for DAKI project
 
