@@ -80,7 +80,6 @@ install2.r --error --skipinstalled \
     jsonlite \
     httr \
     BiocManager \
- #   PROJ \
     sotkanet \
     jsonlite \
     pxweb \
