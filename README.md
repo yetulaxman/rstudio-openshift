@@ -1,10 +1,10 @@
 # rstudio-openshift applications (Work in progress)
 
-Rstudio-openshift applications facilitate running container-based data analytics tools in CSC's [Rahti container cloud](https://rahti.csc.fi/) and [notebooks environment](https://notebooks.csc.fi/). This repository contains openshift templates borrowed from other [CSC Github repository](https://github.com/CSCfi/rstudio-openshift).
+Rstudio-openshift applications facilitate running container-based data analytics tools in CSC's [Rahti container cloud](https://rahti.csc.fi/) and [notebooks environment](https://notebooks.csc.fi/). This repository contains openshift templates borrowed from other [CSC Github repository](https://github.com/CSCfi/rstudio-openshift). Rstudio custom images can be tailored depending on the requirement and are built using docker container environment.
 
-Currently these efforts include:
+Rstudio applications currently include:
 - [rstudio for daki project](#rstudio-for-daki-project)
-- [rstudio for basic data analysis course](#rstudio-for-basic-data-analysis-course) 
+- [rstudio for training environment](#rstudio-for-training-environment) 
 
 # rstudio for daki project
 
@@ -20,7 +20,7 @@ The following openshift command can be used to deploy rstudio-daki server on Rah
 ### Deployment of daki rstudio on Notebooks
 ...
 
-# rstudio for basic data analysis course 
+# rstudio for training environment 
 Rstudio dockerfile for basic data analyis course (rstudio-rda) includes latest version of rstudio, R (v4.0.2) and basic R-packages. Current state of Dockerfile (*rstudio-rda.Dockerfile*) is available in *rda* folder.
 
 ## Deploying rstudio-rda on Rahti *via* commandline
