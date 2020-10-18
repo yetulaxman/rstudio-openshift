@@ -35,7 +35,8 @@ apt-get update -qq \
     vim \
     nano \
     gawk \
-    whois 
+    whois \
+    gdebi-core
 
 # lwgeom 0.2-2 and 0.2-3 have a regression which prevents install on ubuntu:bionic
 ## permissionless PAT for builds
