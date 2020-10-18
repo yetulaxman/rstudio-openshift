@@ -13,8 +13,8 @@ RUN /rocker_scripts/install_daki.sh
 RUN /rocker_scripts/install_rstudio.sh
 RUN /rocker_scripts/install_pandoc.sh
 
-VOLUME /data
-COPY open-data-examples /data/
+VOLUME /scripts
+COPY open-data-examples /scripts/
 
 
 # Setup various variables
