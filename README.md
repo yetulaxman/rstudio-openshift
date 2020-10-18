@@ -6,6 +6,8 @@ Rstudio applications currently include:
 - [rstudio for DAKI project](#rstudio-for-DAKI-project)
 - [rstudio for training environment](#rstudio-for-training-environment) 
 
+Once rstudio is image compatible for deploying in openshift environment, you can then deploy in Notebooks environment. Please follow the intrsuctions for [deploying rstudio images onto notebooks environment](deploying-rstudio-images-onto-notebooks-environment)
+
 # rstudio for DAKI project
 
 Rstudio docker image for DAKI project (rstudio-daki) includes the latest version of R (v4.0.0), rstudio and required R-packages to help various data analysis activities in the broad scope of DAKI project. Current state of Dockerfile is available in *daki* folder. In addition ".dockerfile" is also included to generate a docker image that can be deployed on cPouta application where users usually have previlized access rights. The image thus generated however may not be compatible either openshift or notebooks enviroment.
@@ -21,9 +23,6 @@ In case you want to include shiny part as well, please use the following openshi
 
 * *oc process -f rstudio-daki-shiny-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
-### Deployment of daki rstudio on Notebooks
-...
-
 # rstudio for training environment 
 Rstudio dockerfile for basic data analyis course (rstudio-rda) includes latest version of rstudio, R (v4.0.2) and basic R-packages. Current state of Dockerfile (*rstudio-rda.Dockerfile*) is available in *rda* folder.
 
@@ -34,8 +33,8 @@ The following openshift command can be used to deploy rstudio-rda server on Raht
 
 * *oc process -f rstudio-rda-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
-### Deployment of rstudio-rda on Notebooks
-...
+# Deploying rstudio images onto notebooks environment
+
 
 
 
