@@ -1,10 +1,10 @@
 # Rstudio-openshift applications (Work in progress)
 
-Rstudio-openshift applications in this repository facilitate running containerised data analytics tools of Rstudio in CSC's [Rahti container cloud](https://rahti.csc.fi/) and [notebooks environment](https://notebooks.csc.fi/). This repository extends the openshift templates developed in one of other [CSC Github repositories](https://github.com/CSCfi/rstudio-openshift) to build customised Rstudio applications. The custom images here are built in docker environment and can be tailored depending on your requirements. Our effort towards containerised Rstudio custom images currently include:
+Rstudio-openshift applications in this repository facilitate running containerised data analytics tools of Rstudio in CSC's [Rahti container cloud](https://rahti.csc.fi/) and [notebooks environment](https://notebooks.csc.fi/). This repository extends openshift templates developed in one of other [CSC Github repositories](https://github.com/CSCfi/rstudio-openshift) to build customised Rstudio applications. Custom images here are built in docker environment and can be tailored depending on your requirements. Our effort towards containerised Rstudio custom images here currently include:
 - [Rstudio for DAKI project](#Rstudio-for-DAKI-project)
 - [Rstudio for training environment](#Rstudio-for-training-environment) 
 
-Once rstudio image is compatible for deploying in openshift environment, you can then use it to deploy in notebooks environment. One way to check it whether your custom images is compatible with openshift environment is to deploy the image in Rahti container cloud at CSC. Please follow instructions for [deploying a pre-made rstudio image onto notebooks environment](#Deployment-of-rstudio-images-onto-notebooks-environment)
+Once rstudio image is compatible for deploying in openshift environment, you can then use it to deploy in notebooks environment. One way to check it whether your custom images is compatible with openshift environment is to deploy the image in Rahti container cloud at CSC. Please follow the instructions for [deploying a pre-made rstudio image onto notebooks environment](#Deployment-of-rstudio-images-onto-notebooks-environment)
 
 # Rstudio for DAKI project
 
