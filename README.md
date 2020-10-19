@@ -10,7 +10,7 @@ Once rstudio image is compatible for deploying in openshift environment, you can
 
 Rstudio docker container for DAKI project (rstudio-daki) includes the latest version of R (v4.0.0), rstudio and required R-packages to help with various data analysis activities in the broad scope of DAKI project. Customised Dockerfile (file name: Dockerfile) which is meant for deploying on Rahti and eventually on notebooks environment is available in *daki-shiny* folder. 
 
-In addition to opehshift Dockerfile mentioned above, other "*.dockerfile" is also included to generate a docker image that can be deployed on cPouta environment where users usually have previlized access rights. The image thus generated however may not be compatible either in openshift or notebooks enviroment.
+In addition to opehshift Dockerfile mentioned above, other "*rstudio-daki.dockerfile*" is also included to generate a docker image that can be deployed on cPouta environment where users usually have previlized access rights. The image thus generated however may not be compatible either in openshift or notebooks enviroment.
 
 ### Deployment of rstudio-daki on Rahti *via* commandline
 Original openshift template (i.e., *rstudio-template.yaml*) was renamed as *rstudio-daki-shiny-template.yaml* to deploy rstudio-daki on Rahti container cloud. 
@@ -20,7 +20,7 @@ Please use the following openshift command to deploy rstudio-daki server on Raht
 * *oc process -f rstudio-daki-shiny-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
 # Rstudio for training environment 
-Rstudio dockerfile for basic data analyis course (rstudio-rda) includes the latest version of rstudio, R (v4.0.2) and basic R-packages. Dockerfile (*rstudio-rda.dockerfile*) for building the custom image is available in *rda* folder.
+Rstudio dockerfile for basic data analysis course (rstudio-shiny) includes the latest version of rstudio, R (v4.0.2) and basic R-packages. Dockerfile (*rstudio-rda.dockerfile*) for building the custom image is available in *rstudio-shiny* folder.
 
 ## Deploying rstudio-rda on Rahti *via* commandline
 Please use  *rstudio-shiny-template.yaml* template which will use *Dockerfile* available in *rda* folder for deployment on Rahti.
