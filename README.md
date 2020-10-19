@@ -1,10 +1,10 @@
 # rstudio-openshift applications (Work in progress)
 
-Rstudio-openshift applications in this repository facilitate running containerised data analytics tools of Rstudio in CSC's [Rahti container cloud](https://rahti.csc.fi/) and [notebooks environment](https://notebooks.csc.fi/). This repository extends the openshift templates developed in one of other [CSC Github repositories](https://github.com/CSCfi/rstudio-openshift) to build customised Rstudio applications. The custom images  are built using docker environment and can be tailored depending on your requirements. Our effort towards contaienrised Rstudio custom images here currently include:
+Rstudio-openshift applications in this repository facilitate running containerised data analytics tools of Rstudio in CSC's [Rahti container cloud](https://rahti.csc.fi/) and [notebooks environment](https://notebooks.csc.fi/). This repository extends the openshift templates developed in one of other [CSC Github repositories](https://github.com/CSCfi/rstudio-openshift) to build customised Rstudio applications. The custom images  are built using docker environment and can be tailored depending on your requirements. Our effort towards containerised Rstudio custom images here currently include:
 - [rstudio for DAKI project](#rstudio-for-DAKI-project)
 - [rstudio for training environment](#rstudio-for-training-environment) 
 
-Once rstudio image is compatible for deploying in openshift environment, you can then deploy in notebooks environment. Please follow instructions for [deploying rstudio images onto notebooks environment](#Deployment-of-rstudio-images-onto-notebooks-environment)
+Once rstudio image is compatible for deploying in openshift environment, you can then use it to deploy in notebooks environment. One way to check it whethere the custom images are compatible with openshift environment is to deploying the image in Rahti container cloud. Please follow instructions for [deploying pre-made rstudio images onto notebooks environment](#Deployment-of-rstudio-images-onto-notebooks-environment)
 
 # rstudio for DAKI project
 
