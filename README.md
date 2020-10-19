@@ -47,7 +47,7 @@ Click on the **Blueprints** tab in the top menu to access various *Templates* fo
 - [Rahti container cloud](https://rahti.csc.fi/) 
 - [notebooks environment](https://notebooks.csc.fi/)
 - [Rahti Docker registry](https://registry-console.rahti.csc.fi/)
-- [Request a new course](https://www.webropolsurveys.com/S/84118B6BD6E97501.par) on [CSC Notebooks](https://notebooks.csc.fi)
+- [Request a new course](https://www.webropolsurveys.com/S/84118B6BD6E97501.par) on CSC notebooks
 
 # Funding
 
