@@ -23,14 +23,14 @@ Please use the following openshift command to deploy rstudio-daki server on Raht
 Rstudio dockerfile for basic data analyis course (rstudio-rda) includes the latest version of rstudio, R (v4.0.2) and basic R-packages. Dockerfile (*rstudio-rda.dockerfile*) for building the custom image is available in *rda* folder.
 
 ## Deploying rstudio-rda on Rahti *via* commandline
-Please use  *rstudio-rda-template.yaml* template which will use *Dockerfile* available in *rda* folder for deployment on Rahti.
+Please use  *rstudio-shiny-template.yaml* template which will use *Dockerfile* available in *rda* folder for deployment on Rahti.
 
 The following openshift command can be used to deploy rstudio-rda server on Rahti
 
-* *oc process -f rstudio-rda-shiny-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
+* *oc process -f rstudio-shiny-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
 
-# Deployment of rstudio image onto notebooks environment
+# Deployment of Rstudio image onto notebooks environment
 
 ### Login to CSC Notebooks to set up a group
 
