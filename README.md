@@ -34,7 +34,7 @@ The following openshift command can be used to deploy rstudio-shiny server on Ra
 
 ### Login to CSC Notebooks to set up a group
 
-First, navigate to [CSC Notebooks](https://notebooks.csc.fi) service using your HAKA authentication. The landing page after logging in shows a dashboard with a list of Blueprints which are ready for lanching a notebook of your choice. However, if you do want a custom notebook for your rstudio, please request CSC for administrator rights (or [group ownership rights](http://cscfi.github.io/pebbles/group_owners_guide.html)) using CSC Notebooks. Once you have admin rights, you can see **Groups** and **Blueprints** in the menu on the top of the page. Click on the **Groups** tab and the  **Create a New Group** tab to create a group for your notebook
+First, navigate to [CSC Notebooks](https://notebooks.csc.fi) service using your HAKA authentication. The landing page after logging in shows a dashboard with a list of Blueprints which are ready for lanching a notebook of your choice. However, if you do want a custom notebook for your rstudio, please request CSC for administrator rights (aka[group ownership rights](http://cscfi.github.io/pebbles/group_owners_guide.html))for using CSC Notebooks. Once you have admin rights, you can see **Groups** and **Blueprints** in the menu on the top of the page. You can click on the **Groups** tab and then on  **Create a New Group** tab to create a group for your notebook.
 
 ### Create a new Blueprint for your rstudio application
 
