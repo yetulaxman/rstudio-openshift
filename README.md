@@ -1,12 +1,12 @@
 # Rstudio-openshift applications (Work in progress)
 
 Rstudio-openshift applications in this repository facilitate running containerised data analytics tools of Rstudio in CSC's [Rahti container cloud](https://rahti.csc.fi/) and [notebooks environment](https://notebooks.csc.fi/). This repository extends the openshift templates developed in one of other [CSC Github repositories](https://github.com/CSCfi/rstudio-openshift) to build customised Rstudio applications. The custom images  are built using docker environment and can be tailored depending on your requirements. Our effort towards containerised Rstudio custom images currently include:
-- [rstudio for DAKI project](#rstudio-for-DAKI-project)
+- [Rstudio for DAKI project](#Rstudio-for-DAKI-project)
 - [Rstudio for training environment](#Rstudio-for-training-environment) 
 
 Once rstudio image is compatible for deploying in openshift environment, you can then use it to deploy in notebooks environment. One way to check it whether your custom images is compatible with openshift environment is to deploy the image in Rahti container cloud at CSC. Please follow instructions for [deploying a pre-made rstudio image onto notebooks environment](#Deployment-of-rstudio-images-onto-notebooks-environment)
 
-# rstudio for DAKI project
+# Rstudio for DAKI project
 
 Rstudio docker container for DAKI project (rstudio-daki) includes the latest version of R (v4.0.0), rstudio and required R-packages to help with various data analysis activities in the broad scope of DAKI project. Customised Dockerfile (file name: Dockerfile) which is meant for deploying on Rahti and eventually on notebooks environment is available in *daki-shiny* folder. 
 
@@ -31,52 +31,25 @@ The following openshift command can be used to deploy rstudio-rda server on Raht
 
 
 
-# Deployment of rstudio images onto notebooks environment
+# Deployment of rstudio image onto notebooks environment
 
-### Setting up CSC Notebooks
+### Login to CSC Notebooks to set up a group
 
-Access the [CSC Notebooks](https://notebooks.csc.fi) service using a web browser. Log in using your HAKA Federation account (that is, your university account).
+First, navigate to [CSC Notebooks](https://notebooks.csc.fi) service using your HAKA authentication. The landing page after logging in shows a dashboard with a list of Blueprints which are ready for lanching a notebook of your choice. However, if you do want a custom notebook for your rstudio, please request CSC for administrator rights (or [group ownership rights](http://cscfi.github.io/pebbles/group_owners_guide.html)) using CSC Notebooks. Once you have admin rights, you can see **Groups** and **Blueprints** in the menu on the top of the page. Click on the **Groups** tab and the  **Create a New Group** tab to create a group for your notebook
 
-The landing page will show a list of Blueprints, which are like "recipes" for launching various interactive programming environments.
+### Create a new Blueprint for your rstudio application
 
-Provided that you have requested group administrator rights for CSC Notebooks, you should see **Groups** and **Blueprints** in the menu on top of the page.
-
-### Set up a group
-
-Click on the **Groups** tab in the top menu.
-
-Click **Create a New Group** to create a group for course participants.
-
-Enter a name and a description for the group and click **Create**.
-
-The newly created group should now be visible under the **List of Available Groups**.
-
-Select the group and copy the *Join Code*.
-
-Distribute this code to students and instruct them to login to CSC Notebooks, select **Account** and click **Join Group**. Enter the code to join the group.
-
-For more information on group administration, see the [Group Owner's Guide](http://cscfi.github.io/pebbles/group_owners_guide.html) for CSC Notebooks.
-
-### Create a Blueprint
-
-Click on the **Blueprints** tab in the top menu.
-
-The page shows various *Templates* for creating a Blueprint. Choose *Rahti Jupyter Minimal* and click **Create Blueprint**.
-
-Select the group created in step 1 in the *Select Group* menu.
-
-Add an informative name and a description for the Blueprint.
-
+Click on the **Blueprints** tab in the top menu to access various *Templates* for creating a Blueprint. Choose *Rahti RStudio* and click **Create Blueprint**. The template is shown in the picture for the clarity. Select the group created in the *Select Group* menu. Add name and description for your Blueprint.
 
 <img src="./Notebooks-deploy.png" width="50%">
 
 # Usefull links
-
-- [ ] [Apply for a new CSC project](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/academic-csc-project).
-
-- [ ] [Apply for cPouta cloud service access](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/cpouta) for your project.
-
-- [ ] [Request a new course](https://www.webropolsurveys.com/S/84118B6BD6E97501.par) on [CSC Notebooks](https://notebooks.csc.fi).
+- [Rahti container cloud](https://rahti.csc.fi/) 
+- [notebooks environment](https://notebooks.csc.fi/)
+- [Rahti Docker registry](https://registry-console.rahti.csc.fi/)
+- [Apply for a new CSC project](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/academic-csc-project).
+- [Apply for cPouta cloud service access](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/cpouta) for your project.
+- [Request a new course](https://www.webropolsurveys.com/S/84118B6BD6E97501.par) on [CSC Notebooks](https://notebooks.csc.fi)
 
 # Funding
 
