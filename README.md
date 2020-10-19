@@ -38,7 +38,7 @@ First, navigate to [CSC Notebooks](https://notebooks.csc.fi) service using your 
 
 ### Create a new Blueprint for your rstudio application
 
-Click on the **Blueprints** tab in the top menu to access various *Templates* for creating a Blueprint. Choose *Rahti RStudio* and click **Create Blueprint**. The template is shown in the picture for the clarity. Select the group created in the *Select Group* menu. Add name and description for your Blueprint.
+Click on the **Blueprints** tab in the top menu to access various *Templates* for creating a Blueprint. Choose *Rahti RStudio* and click **Create Blueprint**. The template is shown in the picture for the clarity. Select the group created in the *Select Group* menu. Add name and description for your Blueprint. In order to fill **openshift template url** field, please use imageready openshift templates (*-imageready.yaml file) available in this GitHub repository. Please note that you have to change URLs for your custom in imageready openshift templates before using them in creating **Blueprints** for notebooks
 
 <img src="./Notebooks-deploy.png" width="50%">
 
