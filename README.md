@@ -42,10 +42,10 @@ Click on the **Blueprints** tab in the top menu to access various *Templates* fo
 
 <img src="./Notebooks-deploy.png" width="50%">
 
-# Usefull links
+# Usefull CSC resources
 - [Apply for a new CSC project](https://my.csc.fi/)
 - [Rahti container cloud](https://rahti.csc.fi/) 
-- [notebooks environment](https://notebooks.csc.fi/)
+- [Notebooks environment](https://notebooks.csc.fi/)
 - [Rahti Docker registry](https://registry-console.rahti.csc.fi/)
 - [Request a new course](https://www.webropolsurveys.com/S/84118B6BD6E97501.par) on CSC notebooks
 
