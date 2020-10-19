@@ -30,7 +30,6 @@ The following openshift command can be used to deploy rstudio-rda server on Raht
 * *oc process -f rstudio-rda-shiny-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
 
-
 # Deployment of rstudio image onto notebooks environment
 
 ### Login to CSC Notebooks to set up a group
@@ -44,11 +43,10 @@ Click on the **Blueprints** tab in the top menu to access various *Templates* fo
 <img src="./Notebooks-deploy.png" width="50%">
 
 # Usefull links
+- [Apply for a new CSC project](https://my.csc.fi/)
 - [Rahti container cloud](https://rahti.csc.fi/) 
 - [notebooks environment](https://notebooks.csc.fi/)
 - [Rahti Docker registry](https://registry-console.rahti.csc.fi/)
-- [Apply for a new CSC project](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/academic-csc-project).
-- [Apply for cPouta cloud service access](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/cpouta) for your project.
 - [Request a new course](https://www.webropolsurveys.com/S/84118B6BD6E97501.par) on [CSC Notebooks](https://notebooks.csc.fi)
 
 # Funding
