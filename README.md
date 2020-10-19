@@ -4,7 +4,7 @@ Rstudio-openshift applications in this repository facilitate running containeris
 - [Rstudio for DAKI project](#Rstudio-for-DAKI-project)
 - [Rstudio for training environment](#Rstudio-for-training-environment) 
 
-Once rstudio image is compatible for deploying in openshift environment, you can then use it to deploy in notebooks environment. One way to check it whether your custom image is compatible with openshift environment is to deploy the image in Rahti container cloud at CSC. Please follow the instructions for [deploying a pre-made rstudio image onto notebooks environment](#Deployment-of-rstudio-images-onto-notebooks-environment)
+Once rstudio image is compatible for deploying in openshift environment, you can then use it to deploy in notebooks environment. One way to check whether your custom image is compatible with openshift environment is to deploy the image in Rahti container cloud at CSC. Please follow the instructions for [deploying a pre-made rstudio image onto notebooks environment](#Deployment-of-rstudio-images-onto-notebooks-environment)
 
 # Rstudio for DAKI project
 
