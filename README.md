@@ -29,7 +29,6 @@ The following openshift command can be used to deploy rstudio-shiny server on Ra
 
 * *oc process -f rstudio-shiny-template.yaml -p NAME="application-name" -p USERNAME="your-username" -p PASSWORD="your-password" | oc apply -f -*
 
-
 # Deployment of Rstudio image onto notebooks environment
 
 ### Login to CSC Notebooks to set up a group
